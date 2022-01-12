@@ -1,0 +1,8 @@
+.NavBar{
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+    color: yellow;
+};
