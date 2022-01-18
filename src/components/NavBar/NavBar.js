@@ -1,4 +1,3 @@
-import './components/NavBar/NavBar.css';
 function NavBar() {
     return <>
         {/* Creamos barra para el navegador */}
