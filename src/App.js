@@ -4,7 +4,7 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/IndexBody/ItemListContainer';
 // import MyClassComponent from './components/MyClassComponent';
 // import MyFunctionalComponent from './components/MyFunctionalComponent';
-
+import ItemCount from './components/ItemCount';
 
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
       <ItemListContainer/>
       {/* <MyClassComponent/>
       <MyFunctionalComponent/> */}
+      <ItemCount/>
     </div>
   );
 }

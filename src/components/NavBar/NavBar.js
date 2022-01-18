@@ -1,3 +1,4 @@
+import { BsFillCartFill } from 'react-icons/bs'
 function NavBar() {
     return <>
         {/* Creamos barra para el navegador */}
@@ -6,7 +7,7 @@ function NavBar() {
             <h3>Seccion 1</h3>
             <h3>Seccion 2</h3>
             <h3>Seccion 3</h3>
-            <img className="NavBarImg" src="http://assets.stickpng.com/thumbs/59bedb1e7a216d0b052f128b.png"></img>
+            <h3> <BsFillCartFill></BsFillCartFill>  </h3>
         </div>
     </>
 };
