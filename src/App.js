@@ -15,7 +15,7 @@ function App() {
       <ItemListContainer/>
       {/* <MyClassComponent/>
       <MyFunctionalComponent/> */}
-      <ItemCount/>
+      <ItemCount name="computadora" stock= {5}  />
     </div>
   );
 }

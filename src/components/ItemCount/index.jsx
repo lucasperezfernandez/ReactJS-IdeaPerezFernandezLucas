@@ -1,7 +1,6 @@
 import React from "react";
 
-export default function ItemCount(){
-    let stock = 5;
+export default function ItemCount({name , stock}){
     const [counter, setCounter] = React.useState(1)
 
     const less = () => {
@@ -20,9 +19,8 @@ export default function ItemCount(){
     }
     return (
         <>
-        <h2>Item re copado</h2>
-        <img src="" alt="   " /><p>aca deberia haber una imagen</p>
-        <h3>Cantidad deseada: {counter}</h3>
+        <h2>Producto: {name}</h2>
+        <p>Cantidad deseada: {counter}</p>
         <button onClick={less}>-</button>
         <button onClick={more}>+</button>
         </>
