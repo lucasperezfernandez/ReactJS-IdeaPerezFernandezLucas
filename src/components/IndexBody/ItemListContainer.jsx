@@ -1,14 +1,13 @@
+import { products } from "../items/Item";
 
-function ItemListContainer() {  
-    return <>
-        <div className="ItemListContainer">
-            <li>Producto 1</li>
-            <li>Producto 2</li>
-            <li>Producto 3</li>
-            <li>Producto 4</li>
-            <li>Producto 5</li>
-        </div>
-    </>
+function ItemListContainer() { 
+    return(
+    <ul>
+        {products.map((product) => (
+            <li key={ product.id }> {product.name} precio: {product.price} </li>
+        ))}
+    </ul>
+    )
 }
 
 export default ItemListContainer;

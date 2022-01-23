@@ -5,17 +5,31 @@ import ItemListContainer from './components/IndexBody/ItemListContainer';
 // import MyClassComponent from './components/MyClassComponent';
 // import MyFunctionalComponent from './components/MyFunctionalComponent';
 import ItemCount from './components/ItemCount';
+import { useEffect, useState } from 'react';
+import { getProductos } from './components/items/Item';
 
 
 function App() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    getProductos()
+      .then((data) => setProducts(data))
+      .catch((error) => console.log(error));
+  }, []);
+  
   return ( 
     <div>
       <NavBar />
       <h3>Hola Mundo!</h3>
-      <ItemListContainer/>
       {/* <MyClassComponent/>
       <MyFunctionalComponent/> */}
-      <ItemCount name="computadora" stock= {5}  />
+      <ItemCount name="Boton Prueba" stock= {5}/>
+      <ul>
+        {products.map((product) => (
+            <li key={ product.id }> {product.name} precio: {product.price} </li>
+        ))}
+      </ul>
     </div>
   );
 }
