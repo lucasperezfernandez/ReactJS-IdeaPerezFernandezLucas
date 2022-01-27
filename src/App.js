@@ -35,7 +35,7 @@ function App() {
         <h1>Hola</h1>
         <ul>
           {poke.map((items) => {
-            return <li key={items.id}>{items.name}</li>;
+            return <li key={items.id}>{items.title}</li>;
           })}
         </ul>
       </div>
