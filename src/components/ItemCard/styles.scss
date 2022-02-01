@@ -1,7 +1,11 @@
 .item-card {
-    border: 1px solid red;
+    border: 1px solid ;
     width: 300px;
+    background-color: #1e003a;
     margin: 5px;
+    p{
+        color: #ff1cd8 ;
+    }
     .img-container {
         height: 50%;
         background-color: none;
