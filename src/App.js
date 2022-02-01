@@ -1,42 +1,42 @@
-import './App.css';
-// import './components/NavBar/NavBar.css';
-// import NavBar from './components/NavBar/NavBar';
-// import ItemListContainer from './components/IndexBody/ItemListContainer';
-// import MyClassComponent from './components/MyClassComponent';
+// npm start  --> ejecuta la app
+// npm run json-server  --> ejecuta el servidor json
+// json-server --watch db.json --port 3500  -->Correr el servidor json en el puerto 3500
+
+import './App.scss';
 // import MyFunctionalComponent from './components/MyFunctionalComponent';
 import ItemCount from './components/ItemCount';
-import { useEffect, useState } from 'react';
 import NavBar from './components/NavBar/NavBar';
-import GetProducts from './components/items/Item';
+import GetProducts from './components/items/Items';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import ProductsPage from './pages/ProductsPage';
+import ProductDetailPage from './pages/ProductDetailPage';
+import AboutPage from './pages/AboutPage';
 
-// import { getProductos } from './components/items/Item';
 
 function App() {
 return (
-  <div>
-    <NavBar></NavBar>
-    <h2>Titulo</h2>
-    <GetProducts></GetProducts>
-    <ItemCount name="Boton Prueba" stock= {5}/>
-  </div>
+  <BrowserRouter>
+    <NavBar/>
+    <Routes>
+      <Route path='/'>
+        <Route index element={<HomePage />}/>
+        <Route path='products'>
+          <Route index element = {<ProductsPage/>}></Route>
+          <Route path=":productId" element={<ProductDetailPage />}></Route>
+        </Route>
+        <Route path='about' element={<AboutPage/>}></Route>
+      </Route>
+    </Routes>
+  </BrowserRouter>
+  // <div>
+  //   <NavBar></NavBar>
+  //   <h2>Titulo</h2>
+  //   <GetProducts></GetProducts>
+  //   <ItemCount name="Boton Prueba" stock= {5}/>
+  // </div>
 )
-
 }
+
+
 export default App;
-
-  // const [products, setProducts] = useState([]);
-
-  // useEffect(() => {
-  //   getProductos()
-  //     .then((data) => setProducts(data))
-  //     .catch((error) => console.log(error));
-  // }, []);
-
-    // <div>
-    //   <NavBar />
-    //   <h3>Hola Mundo!</h3>
-    //   {/* <MyClassComponent/>
-    //   <MyFunctionalComponent/> */}
-    //   <ItemCount name="Boton Prueba" stock= {5}/>
-
-

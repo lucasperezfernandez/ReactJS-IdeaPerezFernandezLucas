@@ -1,12 +1,12 @@
 import React from "react";
 
-export default function ItemCount({name , stock}){
+export default function ItemCount({stock}){
     const [counter, setCounter] = React.useState(1)
 
     const less = () => {
         setCounter(counter - 1);
         if( counter <= 0 ){
-            alert("Te arrepentiste? :(");
+            alert("Cantidad minima");
             setCounter(0)
         }
     }
@@ -19,10 +19,10 @@ export default function ItemCount({name , stock}){
     }
     return (
         <>
-        <h2>Producto: {name}</h2>
         <p>Cantidad deseada: {counter}</p>
         <button onClick={less}>-</button>
         <button onClick={more}>+</button>
+        <button>Agregar al carrito</button>
         </>
     )
 }

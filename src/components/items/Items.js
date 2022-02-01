@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-
+import Item from '../ItemCard';
+import "./styles.scss";
 
 
 function GetProducts() {
@@ -20,17 +21,16 @@ function GetProducts() {
     }, []);
 
     if (isLoading) {
-        return <p>Carrgando los poke...</p>
+        return <p>Cargando los poke...</p>
     } else if (error) {
         return <p>Ha habido un error {error.message}</p>
     } else {
         return (
             <div>
                 <h1>Productos</h1>
-                <ul>
+                <ul className='item-container'>
                     {poke.map((items) => {
-                        return <li key={items.id}>{items.title}, <p>precio: {items.price}.</p> <p>Detalle: {items.detail}</p></li>;
-                        
+                        return <Item key={items.id} product={items}/>;
                     })}
                 </ul>
             </div>
