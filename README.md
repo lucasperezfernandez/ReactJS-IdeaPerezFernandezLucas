@@ -68,3 +68,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+Se creo Json server 3500, con el db creado para un pryecto anterior, el cual apunta a un ecommerce  de informatica. 
+Se descargo de json server de: [https://github.com/typicode/json-server]
+Se instalo Sass [https://create-react-app.dev/docs/adding-a-sass-stylesheet/]
+Se utiliza react icons para los iconos.
+Se utiliza react router dom v6 para la navegacion de la aplicacion [https://reactrouter.com/docs/en/v6/getting-started/overview]

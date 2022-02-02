@@ -2,7 +2,7 @@
 // npm run json-server  --> ejecuta el servidor json
 // json-server --watch db.json --port 3500  -->Correr el servidor json en el puerto 3500
 // Sass --> npm install sass
-// React router dom v6  --> npm install react-router-dom@6
+// React router dom v6  --> npm install react-router-dom@6 
 import './App.scss';
 // import MyFunctionalComponent from './components/MyFunctionalComponent';
 import ItemCount from './components/ItemCount';
