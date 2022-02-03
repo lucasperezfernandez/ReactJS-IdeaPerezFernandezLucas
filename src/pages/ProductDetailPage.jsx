@@ -8,7 +8,6 @@ const ProductDetailPage = () => {
     const [product, setProduct] = useState();
     const [isLoading, setIsLoading] = useState(false);
     // console.log (5 === +productId);
-    
     useEffect(()=>{
         const URL = `http://localhost:3500/items/${productId}`;
         setIsLoading(true);
@@ -17,7 +16,6 @@ const ProductDetailPage = () => {
             .then(data=> setProduct(data))
             .finally(()=> setIsLoading(false));
     }, [productId]);
-    
     if(isLoading || !product) return <p>Cargando...</p>;
         return(
             <div>
@@ -26,8 +24,8 @@ const ProductDetailPage = () => {
                 <p>{product.detail}</p>
                 <p>Precio: {product.price} $</p>
                 <p>Stock: {product.stock}</p>
-                
                 <ItemCount stock={product.stock}/>
+                <button >Total</button>
             </div>
         );
 };

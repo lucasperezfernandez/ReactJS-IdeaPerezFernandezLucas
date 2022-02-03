@@ -22,7 +22,8 @@ export default function ItemCount({stock}){
         <p>Cantidad deseada: {counter}</p>
         <button onClick={less}>-</button>
         <button onClick={more}>+</button>
-        <button>Agregar al carrito</button>
+        <p></p>
         </>
-    )
+        
+    );
 }

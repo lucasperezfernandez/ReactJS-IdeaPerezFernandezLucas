@@ -30,7 +30,9 @@ function GetProducts() {
                 <h1>Productos</h1>
                 <ul className='item-container'>
                     {poke.map((items) => {
-                        return <Item key={items.id} product={items}/>;
+                        return (
+                            <Item key={items.id} product={items}/>
+                        );
                     })}
                 </ul>
             </div>
