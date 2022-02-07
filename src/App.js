@@ -10,10 +10,16 @@ import HomePage from './pages/HomePage';
 import ProductsPage from './pages/ProductsPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import AboutPage from './pages/AboutPage';
+import { CartContext } from './context/CartContext';
 
-
+const USER_DATA = {
+  name: 'Laura',
+  email: 'laura@email.com',
+  age: '55', 
+};
 function App() {
 return (
+  <CartContext.Provider value={USER_DATA}>
   <BrowserRouter>
     <NavBar/>
     <Routes>
@@ -27,6 +33,7 @@ return (
       </Route>
     </Routes>
   </BrowserRouter>
+  </CartContext.Provider>
 )
 }
 
