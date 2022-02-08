@@ -1,15 +1,22 @@
 import { useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ItemCount from "../components/ItemCount";
 import "./styles.scss";
 import React from "react";
+import { CartContext } from "../context/CartContext";
 
 const ProductDetailPage = () => {
+    let navigate = useNavigate()
+    const goToCart = () => {
+        navigate('/cart')
+    }
+    
     const {productId} = useParams();
     const [product, setProduct] = useState();
     const [isLoading, setIsLoading] = useState(false);
     const [counter, setCounter] = React.useState(1)
-
+    
     const less = () => {
         setCounter((prevState) => prevState - 1);
         if( counter <= 0 ){
@@ -29,6 +36,7 @@ const ProductDetailPage = () => {
         let total = product.price * counter;
         console.log("Se agrega el siguiente monto a pagar:" + total + "$");
         setCounter(0);
+        navigate('/cart');
     }
     function totalParcial(precio, cantidad) {
         let parcial = precio * cantidad;
@@ -46,6 +54,7 @@ const ProductDetailPage = () => {
     }, [productId]);
     if(isLoading || !product) return <p>Cargando...</p>;
         return(
+            
             <div>
                 <h1>{product.title}</h1>
                 <img className="detail-img" src={product.image} alt={product.title} />

@@ -1,0 +1,29 @@
+
+  \{^_^}/ hi!
+
+  Loading db.json
+  Done
+
+  Resources
+  http://localhost:3500/items
+
+  Home
+  http://localhost:3500
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+
+[0mGET /items [36m304[0m 31.292 ms - -[0m
+[0mGET /items/1 [36m304[0m 32.709 ms - -[0m
+[0mGET /items/1 [36m304[0m 29.859 ms - -[0m
+[0mGET /items/1 [36m304[0m 15.394 ms - -[0m
+[0mGET /items/1 [36m304[0m 31.219 ms - -[0m
+[0mGET /items [36m304[0m 30.022 ms - -[0m
+[0mGET /items/1 [36m304[0m 29.236 ms - -[0m
+[0mGET /items [36m304[0m 30.031 ms - -[0m
+[0mGET /items/1 [36m304[0m 28.493 ms - -[0m
+[0mGET /items/1 [36m304[0m 30.779 ms - -[0m
+[0mGET /items/1 [36m304[0m 26.755 ms - -[0m
+[0mGET /items/1 [36m304[0m 30.157 ms - -[0m
+[0mGET /items [36m304[0m 28.202 ms - -[0m
+[0mGET /items/1 [36m304[0m 30.851 ms - -[0m

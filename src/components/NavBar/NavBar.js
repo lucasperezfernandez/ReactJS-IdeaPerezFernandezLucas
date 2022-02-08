@@ -8,7 +8,7 @@ function NavBar() {
             <ul>
                 <li><Link to='/products'>Productos</Link></li>
                 <li> <Link to='/about'>About</Link> </li>
-                <li> <BsFillCartFill></BsFillCartFill>  </li>
+                <li> <Link to='/cart'><BsFillCartFill></BsFillCartFill> </Link>  </li>
             </ul>
             
         </div>
