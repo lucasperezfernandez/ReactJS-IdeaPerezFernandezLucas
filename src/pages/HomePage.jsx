@@ -5,11 +5,9 @@ import "./styles.scss";
 import Item from "../components/ItemCard";
 
 
+const URL = 'http://localhost:3500/items'
+
 const HomePage = () => {
-    let navigate = useNavigate()
-    const goToProducts = () => {
-        navigate("/products")
-    };
 
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
@@ -17,8 +15,6 @@ const HomePage = () => {
 
 
     useEffect(() => {
-        const URL = 'http://localhost:3500/items'
-
         setIsLoading(true)
         fetch(URL)
             .then((response) => response.json())

@@ -6,7 +6,6 @@ function NavBar() {
         <div className="NavBar">
             <h2 className="NavBar-Heading"><Link to= '/'>GeekSpot</Link> </h2>
             <ul>
-                <li><Link to='/products'>Productos</Link></li>
                 <li> <Link to='/about'>About</Link> </li>
                 <li> <Link to='/cart'><BsFillCartFill></BsFillCartFill> </Link>  </li>
             </ul>

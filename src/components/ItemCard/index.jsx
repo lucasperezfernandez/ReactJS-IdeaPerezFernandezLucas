@@ -11,7 +11,7 @@ const Item = ({product}) => {
             <p>Nombre: {product.title}</p>
             <p>Detalle: {product.detail}</p>
             <p>Precio: {product.price}</p>
-            <button onClick={()=> navigate(`/products/${product.id}`)}>Ver mas...</button>
+            <button onClick={()=> navigate(`/${product.id}`)}>Ver mas...</button>
         </div>
     );
 };
