@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import ItemCount from "../components/ItemCount";
 import "./styles.scss";
 import React from "react";
-import { CartContext } from "../context/CartContext";
 
 const ProductDetailPage = () => {
     let navigate = useNavigate()
@@ -15,8 +14,9 @@ const ProductDetailPage = () => {
     const {productId} = useParams();
     const [product, setProduct] = useState();
     const [isLoading, setIsLoading] = useState(false);
+
+
     const [counter, setCounter] = React.useState(1)
-    
     const less = () => {
         setCounter((prevState) => prevState - 1);
         if( counter <= 0 ){
@@ -38,6 +38,9 @@ const ProductDetailPage = () => {
         setCounter(0);
         navigate('/cart');
     }
+
+
+
     function totalParcial(precio, cantidad) {
         let parcial = precio * cantidad;
         return parcial;

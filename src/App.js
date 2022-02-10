@@ -14,28 +14,24 @@ import AboutPage from './pages/AboutPage';
 import { CartContext, CartProvider } from './context/CartContext';
 import CartPage from './pages/CartPage';
 
-const USER_DATA = {      // CLASE 1:25:00 
-  name: 'Laura',
-  email: 'laura@email.com',
-  age: '55', 
-};
+
 function App() {
 return (
   <CartProvider>
-  <BrowserRouter>
-    <NavBar/>
-    <Routes>
-      <Route path='/'>
-        <Route index element={<HomePage />}/>
-        <Route path='products'>
-          <Route index element = {<ProductsPage/>}></Route>
-          <Route path=":productId" element={<ProductDetailPage />}></Route>
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path='/'>
+          <Route index element={<HomePage />} />
+          <Route path='products'>
+            <Route index element={<ProductsPage />}></Route>
+            <Route path=":productId" element={<ProductDetailPage />}></Route>
+          </Route>
+          <Route path='about' element={<AboutPage />}></Route>
+          <Route path='cart' element={<CartPage />}></Route>
         </Route>
-        <Route path='about' element={<AboutPage/>}></Route>
-        <Route path='cart' element={<CartPage/>}></Route>
-      </Route>
-    </Routes>
-  </BrowserRouter>
+      </Routes>
+    </BrowserRouter>
   </CartProvider>
 )
 }

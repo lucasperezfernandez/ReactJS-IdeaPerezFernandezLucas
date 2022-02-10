@@ -1,4 +1,3 @@
-import ItemCount from "../components/ItemCount";
 import GetProducts from "../components/items/Items";
 
 
