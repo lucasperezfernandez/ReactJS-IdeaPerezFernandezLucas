@@ -4,6 +4,7 @@
 // Sass --> npm install sass
 // React router dom v6  --> npm install react-router-dom@6 
 // Ctrl + C --> cerrar app
+// INSTALAR FIREBASE --> npm install firebase@8.10.0 --save
 import './App.scss';
 import NavBar from './components/NavBar/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';

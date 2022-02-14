@@ -3,9 +3,10 @@ import React from "react";
 import { useEffect, useState } from 'react';
 import "./styles.scss";
 import Item from "../components/ItemCard";
+import { getFirestore } from "../firebase";
 
 
-const URL = 'http://localhost:3500/items'
+// const URL = 'http://localhost:3500/items'
 
 const HomePage = () => {
 
@@ -14,13 +15,32 @@ const HomePage = () => {
     const [error, setError] = useState(null);
 
 
-    useEffect(() => {
-        setIsLoading(true)
-        fetch(URL)
-            .then((response) => response.json())
-            .then((json) => setData(json))
-            .catch((err) => setError(err))
-            .finally(() => setIsLoading(false));
+    React.useEffect(() => {
+        const db = getFirestore();
+        const productCollection = db.collection("productos");
+        //.where("categoryId" , "==", 1)
+        const getDataFromFirestore = async () => {
+            setIsLoading(true);
+            try{
+            const response = await productCollection.get();
+            if(response.empty) console.log("No hay productos");
+            setData(response.docs.map((doc) => ({ ...doc.data(), id: doc.id})));
+        }catch (err){
+            setError(err);
+        }finally{
+            setIsLoading(false)
+        }
+    }
+        getDataFromFirestore();
+        // 1:22:10
+        
+
+    //     setIsLoading(true)
+    //     fetch(URL)
+    //         .then((response) => response.json())
+    //         .then((json) => setData(json))
+    //         .catch((err) => setError(err))
+    //         .finally(() => setIsLoading(false));
     }, []);
 
     if (isLoading) {

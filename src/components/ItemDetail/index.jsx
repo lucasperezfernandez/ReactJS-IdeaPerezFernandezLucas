@@ -10,6 +10,7 @@ const ItemDetail = ({product}) => {
     
     const handleClick = () => {
         addItem(product, counter);
+        setCounter(0)
     }
 
     const [counter, setCounter] = React.useState(1)
