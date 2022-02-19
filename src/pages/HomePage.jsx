@@ -6,7 +6,6 @@ import Item from "../components/ItemCard";
 import { getFirestore } from "../firebase";
 
 
-// const URL = 'http://localhost:3500/items'
 
 const HomePage = () => {
 
@@ -17,8 +16,10 @@ const HomePage = () => {
 
     React.useEffect(() => {
         const db = getFirestore();
-        const productCollection = db.collection("productos");
-        //.where("categoryId" , "==", 1)
+        const productCollection = db
+        .collection("products")
+
+        
         const getDataFromFirestore = async () => {
             setIsLoading(true);
             try{
@@ -32,15 +33,7 @@ const HomePage = () => {
         }
     }
         getDataFromFirestore();
-        // 1:22:10
         
-
-    //     setIsLoading(true)
-    //     fetch(URL)
-    //         .then((response) => response.json())
-    //         .then((json) => setData(json))
-    //         .catch((err) => setError(err))
-    //         .finally(() => setIsLoading(false));
     }, []);
 
     if (isLoading) {
@@ -52,26 +45,14 @@ const HomePage = () => {
             <div>
                 <h1>Productos</h1>
                 <ul className='item-container'>
-                    {data.map((items) => {
+                    {data.map((product) => {
                         return (
-                            <Item key={items.id} product={items} />          
+                            <Item key={product.id} product={product} />          
                         );
-                    })}
+                    })} 
                 </ul>
             </div>
         )
     }
 }
-
-//     return (
-//         <div>
-//             <h1>Home Page</h1>
-//             <h3>Esto es geek spot, el lugar en donde siempre encontras lo que necesitas</h3>
-//             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque doloribus eius laboriosam possimus alias fuga ipsum tenetur velit nesciunt dolorum, officiis cupiditate quisquam natus placeat dignissimos repellendus, neque, porro error!</p>
-//             <button onClick={goToProducts}>Ir a la pagina de productos</button>
-
-//         </div>
-//     );
-// };
-
 export default HomePage;

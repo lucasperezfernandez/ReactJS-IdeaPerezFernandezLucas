@@ -5,6 +5,7 @@
 // React router dom v6  --> npm install react-router-dom@6 
 // Ctrl + C --> cerrar app
 // INSTALAR FIREBASE --> npm install firebase@8.10.0 --save
+// INSTALAR DORENV --> npm install dotenv --save
 import './App.scss';
 import NavBar from './components/NavBar/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -13,7 +14,7 @@ import ProductDetailPage from './pages/ProductDetailPage';
 import AboutPage from './pages/AboutPage';
 import { CartContext, CartProvider } from './context/CartContext';
 import CartPage from './pages/CartPage';
-
+import ThankYouPage from './pages/ThankYoupage';
 
 function App() {
 return (
@@ -26,6 +27,7 @@ return (
             <Route path=":productId" element={<ProductDetailPage />}></Route>
           <Route path='about' element={<AboutPage />}></Route>
           <Route path='cart' element={<CartPage />}></Route>
+          <Route path='thanks/:irderId' element={<ThankYouPage/>}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
