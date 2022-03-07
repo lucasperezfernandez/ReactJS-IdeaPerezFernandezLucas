@@ -16,8 +16,8 @@ React.useEffect(()=>{
 
     return(
         <div>
-            <h1>Gracias por su compra, sr/srta. </h1>
-            <h2>Detalle de su compra:</h2>
+            <h1>Gracias por su compra </h1>
+            
             <p>  </p>
         </div>
     )

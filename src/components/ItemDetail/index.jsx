@@ -39,7 +39,7 @@ const ItemDetail = ({product}) => {
             <img className="detail-img" src={product.image} alt={product.title} />
             <p>{product.detail}</p>
             <p>Precio: {product.price} $</p>
-            <p>Stock: {product.stock}</p>
+            {/* <p>Stock: {product.stock}</p> */}
             <ItemCount less={less} more={more}  />
             <p>cantidad deseada:{counter}</p>
             <p>total: {totalParcial(product.price, counter)}</p>

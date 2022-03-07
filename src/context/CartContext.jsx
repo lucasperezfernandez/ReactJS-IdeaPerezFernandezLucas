@@ -9,6 +9,7 @@ export const CartProvider = ({ children }) => {
         const newItem = { item, quantity, price };
         console.log("Se agrego al carrito:" + newItem)
         setCart((prevState) => [...prevState, newItem]);
+        console.log(cart);
     };
 
     const removeItem = (id) => {

@@ -2,38 +2,10 @@ import { useCart } from "../context/CartContext";
 import * as React from "react";
 import { getFirestore } from "../firebase";
 import { useNavigate } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
+import { useContext } from "react/cjs/react.development";
 
-const CARRITO = [
-    {
-    item: 
-        {
-            "id": 1,
-            "title": "PlayStation 5",
-            "price": 500,
-            "image": "https://store.sony.com.ar/arquivos/menu-ps5.png?v=637300051469000000",
-            "category": "consolas",
-            "detail": "pequeño detalle del producto",
-            "stock": 3,
-            "categoryId": 1,
-            'quantity': 10,
-        },
-        
-    },
-    
-    {
-    item:{
-        "title": "Paraguas ",
-        "price": 50,
-        "image": "https://store.sony.com.ar/arquivos/menu-ps5.png?v=637300051469000000",
-        "category": "consolas",
-        "detail": "pequeño detalle del producto",
-        "stock": 3,
-        "categoryId": 2,
-        'quantity':5,
-    },
-    
-    },
-]
+const CARRITO = []
 
 
 const CartPage = () => {
@@ -81,14 +53,15 @@ const CartPage = () => {
     return (
         <div>
             <h1>Carrito</h1>
-            {CARRITO.map((cart)=>{
+            {/*{cart.map((cart)=>{
                 return(
-                            <div key={cart.item.id}>
+                    <div key={cart.item.id}>
                                 <p>Nombre: {cart.item.title}</p>
                                 <p>precio: {cart.item.price}</p>
-                            </div>)
-                        })}
-            {/* {cart.map((purchase) => {
+                    </div>
+                )
+            })}*/}
+            {cart.map((purchase) => {
                 return (
                     <div key={purchase.item.id}>
                         <p>{purchase.item.title}</p>
@@ -97,7 +70,7 @@ const CartPage = () => {
                         <button onClick={()=>removeItem(purchase.item.id)}>remove</button>
                     </div>
                 ); 
-            })}*/}
+            })}
             <h2>Intrduzca sus datos:</h2>
             <form onSubmit={handleSubmit} style={{display:'flex', flexDirection:'column', border:' 1px solid red',}}>
                 <label htmlFor="name">Nombre</label>
