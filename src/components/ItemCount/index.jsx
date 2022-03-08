@@ -1,11 +1,12 @@
 import React from "react";
 
-const ItemCount = ({less , more}) =>{
+const ItemCount = ({counter , setCounter}) =>{
     return (
-        <>
-        <button onClick={less}>-</button>
-        <button onClick={more}>+</button>
-        </>
+        <div className="counterContainer">
+        <button onClick={() => setCounter((prev) => prev - 1)}>-</button>
+        <p>{counter}</p>
+        <button onClick={() => setCounter((prev) => prev + 1)}>+</button>
+        </div>
     );
 }
 

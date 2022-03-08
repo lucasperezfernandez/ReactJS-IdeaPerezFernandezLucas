@@ -37,8 +37,8 @@ const CartPage = () => {
 
         const newOrder = {
             buyer:{name, phone},
-            items: CARRITO, 
-            total: getTotal(CARRITO),  
+            items: cart, 
+            total: getTotal(cart),  
         };
         console.log(newOrder);
         const db = getFirestore()

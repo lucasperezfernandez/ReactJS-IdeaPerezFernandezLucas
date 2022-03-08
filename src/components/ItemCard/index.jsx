@@ -10,7 +10,7 @@ const Item = ({product}) => {
             </div>
             <p>Nombre: {product.title}</p>
             <p>Detalle: {product.detail}</p>
-            <p>Precio: {product.price}</p>
+            <p>Precio unitario: {product.price} $</p>
             <button onClick={()=> navigate(`/${product.id}`)}>Ver mas...</button>
         </div>
     );
