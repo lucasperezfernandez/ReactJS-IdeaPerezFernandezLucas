@@ -7,10 +7,10 @@ function NavBar() {
     return <>
         {/* Creamos barra para el navegador */}
         <div className="NavBar">
-            <h2 className="NavBar-Heading"><Link to= '/'>GeekSpot</Link> </h2>
+            <h2 ><Link  className="NavBar-Heading geekSpot" to= '/'>GeekSpot</Link> </h2>
             <ul>
-                <li> <Link to='/about'>About</Link> </li>
-                <li> <Link to='/cart'><BsFillCartFill></BsFillCartFill> ({cartQuantity })</Link>  </li>
+                <li> <Link className="NavBar-Heading" to='/about'>About</Link> </li>
+                <li> <Link className="NavBar-Heading" to='/cart'><BsFillCartFill></BsFillCartFill> ({cartQuantity })</Link>  </li>
             </ul>
             
         </div>

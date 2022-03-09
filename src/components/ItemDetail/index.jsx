@@ -21,7 +21,7 @@ const ItemDetail = ({product}) => {
             <p>Precio unitario: {product.price} $</p>
             <ItemCount counter={counter} setCounter={setCounter} />
             <p>total: {totalParcial(product.price, counter)}</p>
-            <button onClick={handleClick}>Agregar al Carrito</button>
+            <button className="button" onClick={handleClick}>Agregar al Carrito</button>
         </div>
     );
 };

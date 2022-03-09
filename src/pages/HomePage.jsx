@@ -42,9 +42,9 @@ const HomePage = () => {
         return <p>Ha habido un error {error.message}</p>
     } else {
         return (
-            <div>
+            <div className="homePage">
                 <h1>Productos</h1>
-                <ul className='item-container'>
+                <ul className='item-container '>
                     {data.map((product) => {
                         return (
                             <Item key={product.id} product={product} />          

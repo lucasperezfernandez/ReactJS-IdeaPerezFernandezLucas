@@ -1,3 +1,4 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
 @import './components/NavBar/NavBar.scss';
 
 *{
@@ -13,3 +14,40 @@
         color: #4fdcff;
     }
 }
+.homePage{
+    background-color: #2c0055;
+}
+.counterContainer{
+    display: flex;
+    flex-direction: row;
+    max-height: 30px;
+}
+.button{
+    
+        color: #4fdcff;
+        margin: 15px;
+}
+
+
+.NavBar{
+    background-color: #1e003a;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+    color: #4fdcff;
+    .NavBar-Heading{
+        color: #4fdcff;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        li{
+            list-style: none;
+            a{text-decoration: none;}
+            
+            
+        }
+    }
+};
