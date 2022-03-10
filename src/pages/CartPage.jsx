@@ -53,14 +53,6 @@ const CartPage = () => {
     return (
         <div>
             <h1>Carrito</h1>
-            {/*{cart.map((cart)=>{
-                return(
-                    <div key={cart.item.id}>
-                                <p>Nombre: {cart.item.title}</p>
-                                <p>precio: {cart.item.price}</p>
-                    </div>
-                )
-            })}*/}
             {cart.map((purchase) => {
                 return (
                     <div key={purchase.item.id}>
@@ -71,14 +63,19 @@ const CartPage = () => {
                     </div>
                 ); 
             })}
-            <h2>Intrduzca sus datos:</h2>
-            <form onSubmit={handleSubmit} style={{display:'flex', flexDirection:'column', border:' 1px solid red',}}>
-                <label htmlFor="name">Nombre</label>
-                <input type="text" id="name"    name="name" placeholder="Escriba su nombre" value={name} onChange={e=>setName(e.target.value)}/>
-                <label htmlFor="phone">Telefono</label>
-                <input type="number" id="phone"    name="phone" placeholder="Escriba su telefono" value={phone} onChange={e=>setPhone(e.target.value)} />
-                <input type="submit" value="Finalizar compra" />
+            <div className="formulario">
+            <form className="CheckOutForm" onSubmit={handleSubmit}>
+                <div className="form-group">
+                    <label htmlFor="name">Nombre</label>
+                    <input type="text" id="name" className="rm-check-input" name="name" placeholder="Escriba su nombre" value={name} onChange={e => setName(e.target.value)} />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="phone">Telefono</label>
+                    <input type="number" id="phone" name="phone" placeholder="Escriba su telefono" value={phone} onChange={e => setPhone(e.target.value)} />
+                </div>
+                <input type="submit" className="button" value="Finalizar compra" />
             </form>
+            </div>
         </div>
     );
 }
