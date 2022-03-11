@@ -15,6 +15,8 @@ import AboutPage from './pages/AboutPage';
 import { CartContext, CartProvider } from './context/CartContext';
 import CartPage from './pages/CartPage';
 import ThankYouPage from './pages/ThankYoupage';
+import ConsolasPage from './pages/ConsolasPage';
+import NotebooksPage from './pages/NotebooksPage';
 
 function App() {
 return (
@@ -25,9 +27,12 @@ return (
         <Route path='/'>
           <Route index element={<HomePage />} />
             <Route path=":productId" element={<ProductDetailPage />}></Route>
+          <Route path='category/:category' element={<HomePage />}></Route>
           <Route path='about' element={<AboutPage />}></Route>
           <Route path='cart' element={<CartPage />}></Route>
-          <Route path='thanks/:irderId' element={<ThankYouPage/>}></Route>
+          <Route path='consolas' element={<ConsolasPage />}></Route>
+          <Route path='notebooks' element={<NotebooksPage />}></Route>
+          <Route path='thanks/:orderId' element={<ThankYouPage/>}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

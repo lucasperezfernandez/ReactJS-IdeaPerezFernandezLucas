@@ -9,6 +9,8 @@ function NavBar() {
         <div className="NavBar">
             <h2 ><Link  className="NavBar-Heading geekSpot" to= '/'>GeekSpot</Link> </h2>
             <ul>
+                <li><Link className='NavBar-Heading' to='/consolas'>Consolas</Link></li>
+                <li><Link className='NavBar-Heading' to='/notebooks'>Notebooks</Link></li>
                 <li> <Link className="NavBar-Heading" to='/about'>About</Link> </li>
                 <li> <Link className="NavBar-Heading" to='/cart'><BsFillCartFill></BsFillCartFill> ({cartQuantity })</Link>  </li>
             </ul>
